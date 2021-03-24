@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pangolin', monospace, sans-serif;
+    color: #333333;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(to top, #ffffff, #402970);
+}
+header img {
+    display: block;
+    margin: 2vh auto 0 auto;
+}
+
+#input-zone {
+    display: block;
+    animation: fadeIn ease 0.6s;
+}
+#input-zone .options-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10vh auto 0 auto;
+    text-align: center;
+    background-color: white;
+    height: auto;
+    width: 335px;
+    input {
+        cursor: pointer;
+        border: 1px solid #fff;
+        padding: 0.5em;
+        -webkit-appearance: none;
+        background-color: #fff;
+        outline: none;
+        height: 50px;
+        width: 170px;
+        
+        transition: 0.4s;
+    }
+    input:checked{
+        background-size: 1px 1px;
+        background-color: #402970;
+    }
+    input:active {
+        transform: scale(1.1);
+        
+        background-color: #402970;
+    }
+    label {
+        cursor: pointer;
+        position: absolute;
+        font-size: 1.1rem;
+    }
+    #bedLabel {
+        margin-left: 170px;
+    }
+    #wakeLabel {
+        margin-right: 170px;
+    }
+}
+
+.calculation {
+    select {
+        display: block;
+        cursor: pointer;
+        margin: 5vh auto;
+        width: 27%;
+        font-size: 1.1rem;
+        padding: 15px;
+        outline: none;
+        color: #402970;
+        border-radius: 20px;
+    }
+    button {
+        cursor: pointer;
+        display: block;
+        background-color: white;
+        color: #402970;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        margin: 0 auto;
+        padding: 20px;
+        font-weight: bolder;
+        font-size: 1.1rem;
+        outline: none;
+        transition: 0.4s;
+        margin-bottom: 5vh;
+    }
+    button:hover {
+        background-color: #402970;
+        border: 1px solid #402970;
+        color: white;
+    }
+    button:active {
+        transform: scale(0.9)
+        
+    }
+}
+
+#new-options-container {
+    display: none;
+}
+
+#new-options-container select {
+    display: block;
+    cursor:pointer;
+    margin: 0 auto;
+    margin-top: 5vh;
+    font-size: 1.5rem;
+    outline: none;
+    border-radius: 15px;
+    width: auto;
+    color: #402970;
+}
+
+#output-zone {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    margin-left: 30vh;
+    margin-right: 30vh;
+    
+    h4, p, button {
+        color: white;
+    }
+    .time-container {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        div {
+            background-color: #261c49;
+            color: white;
+            padding: 10px;
+            width: auto;
+            border-radius: 10px;
+        }
+    }
+    .time-container > div:nth-child(n + 3) {
+        background-color: #31245A;
+    }
+    .time-container > div:nth-child(n + 4) {
+        grid-column: 2;
+    }
+    button {
+        cursor: pointer;
+        outline: none;
+        background-color: rgb(255, 102, 0);
+        padding: 5px;
+        margin-top: 10px;
+        border: none;
+        transition: transform 0.3s; 
+    }
+    button:hover {
+        transform: scale(1.1);
+    }
+    button:active {
+        transform: scale(1.0);
+    }
+}
+
+.afterMain {
+    background-color: white;
+    width: auto;
+    height: auto;
+    p {
+        padding: 20px;
+        margin-left: 5vh;
+        margin-right: 5vh;
+        line-height: 30px;
+    }
+    h1, h3 {
+        padding: 20px;
+        margin-left: 5vh;
+        margin-right: 5vh;
+        color: #01081F;
+        font-weight: bolder;
+        font-size: 2rem;
+    }
+    .answer {
+        padding-top: 0px;
+    }
+    div {
+        padding-bottom: 10px;
+    }
+}
+
+// @media only screen and (max-width: 1421px) {
+//     #input-zone .options-container {
+//         display: none;
+//     }
+
+// }
+// @media only screen and (min-width: 1421px) {
+//     header img {
+//         height: 7vh;
+//     }
+//     #input-zone .options-container {
+//         margin-top: 5rem;
+//     }
+    
+// }
+@media only screen and (max-width: 444px) {
+    header img {
+        display: block;
+        margin: 2vh auto 0 auto;
+        height: 30px;
+    }
+}
+@media only screen and (max-width: 894px) {
+    .calculation {
+        select {
+            width: 40vh;
+        }
+    }
+    .afterMain {
+        p {
+            text-align: center;
+        }
+        h3, h1 {
+            text-align: center;
+        }
+    }
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+@keyframes fadeOut {
+    0% {opacity:1;}
+    100% {opacity:0;}
+}

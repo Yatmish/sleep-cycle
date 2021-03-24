@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pangolin', monospace, sans-serif;
+  color: #333333;
+}
+
+body {
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#402970));
+  background: linear-gradient(to top, #ffffff, #402970);
+}
+
+header img {
+  display: block;
+  margin: 2vh auto 0 auto;
+}
+
+#input-zone {
+  display: block;
+  -webkit-animation: fadeIn ease 0.6s;
+          animation: fadeIn ease 0.6s;
+}
+
+#input-zone .options-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10vh auto 0 auto;
+  text-align: center;
+  background-color: white;
+  height: auto;
+  width: 335px;
+}
+
+#input-zone .options-container input {
+  cursor: pointer;
+  border: 1px solid #fff;
+  padding: 0.5em;
+  -webkit-appearance: none;
+  background-color: #fff;
+  outline: none;
+  height: 50px;
+  width: 170px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#input-zone .options-container input:checked {
+  background-size: 1px 1px;
+  background-color: #402970;
+}
+
+#input-zone .options-container input:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #402970;
+}
+
+#input-zone .options-container label {
+  cursor: pointer;
+  position: absolute;
+  font-size: 1.1rem;
+}
+
+#input-zone .options-container #bedLabel {
+  margin-left: 170px;
+}
+
+#input-zone .options-container #wakeLabel {
+  margin-right: 170px;
+}
+
+.calculation select {
+  display: block;
+  cursor: pointer;
+  margin: 5vh auto;
+  width: 27%;
+  font-size: 1.1rem;
+  padding: 15px;
+  outline: none;
+  color: #402970;
+  border-radius: 20px;
+}
+
+.calculation button {
+  cursor: pointer;
+  display: block;
+  background-color: white;
+  color: #402970;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  outline: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin-bottom: 5vh;
+}
+
+.calculation button:hover {
+  background-color: #402970;
+  border: 1px solid #402970;
+  color: white;
+}
+
+.calculation button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+#new-options-container {
+  display: none;
+}
+
+#new-options-container select {
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: 5vh;
+  font-size: 1.5rem;
+  outline: none;
+  border-radius: 15px;
+  width: auto;
+  color: #402970;
+}
+
+#output-zone {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  margin-left: 30vh;
+  margin-right: 30vh;
+}
+
+#output-zone h4, #output-zone p, #output-zone button {
+  color: white;
+}
+
+#output-zone .time-container {
+  padding: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+#output-zone .time-container div {
+  background-color: #261c49;
+  color: white;
+  padding: 10px;
+  width: auto;
+  border-radius: 10px;
+}
+
+#output-zone .time-container > div:nth-child(n + 3) {
+  background-color: #31245A;
+}
+
+#output-zone .time-container > div:nth-child(n + 4) {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+#output-zone button {
+  cursor: pointer;
+  outline: none;
+  background-color: #ff6600;
+  padding: 5px;
+  margin-top: 10px;
+  border: none;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+#output-zone button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#output-zone button:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.afterMain {
+  background-color: white;
+  width: auto;
+  height: auto;
+}
+
+.afterMain p {
+  padding: 20px;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  line-height: 30px;
+}
+
+.afterMain h1, .afterMain h3 {
+  padding: 20px;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  color: #01081F;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.afterMain .answer {
+  padding-top: 0px;
+}
+
+.afterMain div {
+  padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 444px) {
+  header img {
+    display: block;
+    margin: 2vh auto 0 auto;
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 894px) {
+  .calculation select {
+    width: 40vh;
+  }
+  .afterMain p {
+    text-align: center;
+  }
+  .afterMain h3, .afterMain h1 {
+    text-align: center;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

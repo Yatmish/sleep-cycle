@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Sleep Calculator for You</title>
+</head>
+<body>
+    <header>
+        <img src="https://sleepcalculator.com/images/logo.png" alt="">
+    </header>
+
+    <main id='main'>
+        <section id="input-zone">
+            <div id="new-options-container"></div>
+            
+            <section class="calculation">
+                <select name="time" class='selectionHour' required="">
+                    <option>00:00</option>
+                    <option>00:30</option>
+                    <option>1:00</option>
+                    <option>1:30</option>
+                    <option>2:00</option>
+                    <option>2:30</option>
+                    <option>3:00</option>
+                    <option>3:30</option>
+                    <option>4:00</option>
+                    <option>4:30</option>
+                    <option>5:00</option>
+                    <option>5:30</option>
+                    <option>6:00</option>
+                    <option>6:30</option>
+                    <option>7:00</option>
+                    <option>7:30</option>
+                    <option>8:00</option>
+                    <option selected="">8:30</option>
+                    <option>9:00</option>
+                    <option>9:30</option>
+                    <option>10:00</option>
+                    <option>10:30</option>
+                    <option>11:00</option>
+                    <option>11:30</option>
+                    <option>12:00</option>
+                    <option>12:30</option>
+                    <option>13:00</option>
+                    <option>13:30</option>
+                    <option>14:00</option>
+                    <option>14:30</option>
+                    <option>15:00</option>
+                    <option>15:30</option>
+                    <option>16:00</option>
+                    <option>16:30</option>
+                    <option>17:00</option>
+                    <option>17:30</option>
+                    <option>18:00</option>
+                    <option>18:30</option>
+                    <option>19:00</option>
+                    <option>19:30</option>
+                    <option>20:00</option>
+                    <option>20:30</option>
+                    <option>21:00</option>
+                    <option>21:30</option>
+                    <option>22:00</option>
+                    <option>22:30</option>
+                    <option>23:00</option>
+                    <option>23:30</option>
+                </select>
+            
+                <button id='calculateButton'>Calculate Bed Times</button>
+            </section>
+        </section>
+        
+        <section id="output-zone">
+            <h4 id='output-header'>GO TO BED TIMES</h4>
+            <p id='description-output'>It takes the average human about 15 minutes to fall asleep.
+            To wake up refreshed at 8:30 AM, you should go to bed at one of the following</p>
+            
+            <div class="time-container">
+                <div></div>
+                <div></div> 
+                <div></div> 
+                <div></div> 
+            </div>
+
+            <p>
+                If you wake up at one of these times, you'll rise in between 90-minute sleep cycles. A good night's sleep consists of
+                5-6 complete sleep cycles.
+                Try The Wake-Up Light With Sunrise Simulation that provides a pleasant, natural way to start your morning.
+            </p>
+
+            <button id='calculate-again'>CALCULATE AGAIN</button>
+        </section>
+    </main>
+    
+    <section class="afterMain">
+        <p>Use our sleep cycle calculator to estimate the best time for you to wake up and go to bed. You will be given multiple
+        results based on your age as well as your goal wake time or bedtime. The results are broken down to optimize your <span style="color: #3049E8; cursor:pointer;">REM
+        and non-REM</span> sleep cycles.<br>
+        
+        Your need for sleep will change with age. We created this personalized sleep calculator because we believe people should
+        know when they should wake up and what time they should go to bed based on the latest recommendations from the <span style="color: #3049E8; cursor:pointer;">National
+        Institute of Health</span>, the <span style="color: #3049E8; cursor:pointer;">Sleep Health Journal</span>, and other trusted sources.<br>
+        
+        If you have any questions about the sleep calculator or want to reach out to one of our experts, please don't hesitate
+        to send us a message. We look forward to hearing from you.</p>
+        <h1>Next Steps</h1>
+        <p>If you find yourself struggling with falling asleep or staying asleep, making some simple adjustments to light exposure,
+        activity levels, stress, and your environment can go a long way to finding a long-term solution. We break these tips
+        down on our comprehensive <span style="color: #3049E8; cursor:pointer;">sleep advice</span> page.</p>
+        <h1>Sleep Calculator FAQ</h1>
+        <p>Here are the answers to our most frequently asked questions about calculating sleep times.</p>
+        <h3>What time should I wake up and go to bed?</h3>
+        <p class='answer'>Everyone has a different circadian rhythm. Some people are better off going to bed early and waking up early (early
+        birds), while others do better going to sleep later and waking up later.</p>
+        <h3>Does your need for sleep change with age?</h3>
+        <p class='answer'>Yes. As we age, the number of hours of sleep needed daily decreases. For example, newborns need 14-17 hours/day, while
+        adults aged 65 and over need 7-8 hours/day.</p>
+        <h3>What time should I go to bed if I wake up at 6?</h3>
+        <p class="answer">If you wake up at 6 am, to get 7-9 hours of sleep you should be going to bed between 9 pm and 11 pm.</p>
+        <h3>Why am I still tired after sleeping for 8 hours?</h3>
+        <p class="answer">You may need 8.5 hours or 9 hours of sleep/night. If that doesn't help, you should focus on improving the quality of
+        your sleep by understanding basic sleep hygiene guidelines.</p>
+        <h3>Is it healthy to sleep in the morning?</h3>
+        <p class="answer">Our circadian rhythm determines our sleep/wake cycles. These are determined principally by heat and light, making it
+        natural to sleep when it's colder and darker, and wake when it's light and warmer.</p>
+        <h3>How do I stop waking up tired?</h3>
+        <p class="answer">Understanding basic sleep hygiene can give you insight into what things you may be doing that are causing you to have
+        trouble falling asleep, staying asleep, and waking up tired.</p>
+        <div></div>
+    </section>
+
+    <script>
+        const toggleLabels = document.getElementsByClassName('toggleLabel')
+
+        function changeColorLabel(id) {
+            for (let i = 0; i < 2; i++) {
+                toggleLabels[i].style.color = '#333333';
+            }
+            document.getElementById(id).style.color = 'white';
+        }
+
+        changeColorLabel('wakeLabel')
+    </script>
+
+    <script src="script/responsive.js"></script>
+    <script src='script/fadedTransition.js'></script>
+    <script src="script/calc-zone.js"></script>
+</body>
+</html>
